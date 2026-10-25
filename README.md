@@ -1,2 +1,2 @@
-# Institucional-Sauerkraut-Electronics
+# Institucional Sauerkraut Electronics
 Apresentação Sauerkraut Electronics
