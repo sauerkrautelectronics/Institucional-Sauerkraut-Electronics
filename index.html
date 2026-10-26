@@ -1,13 +1,15 @@
-```html
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Sauerkraut Electronics | Eletrônica e Tecnologia</title>
+    <title>Sauerkraut Electronics | Engenharia Eletrônica e Soluções</title>
 
-    <meta name="description" content="Sauerkraut Electronics: eletrônica, tecnologia, projetos autorais e compartilhamento de conhecimento.">
+    <meta name="description" content="Sauerkraut Electronics: laboratório independente de engenharia eletrônica, soluções simples e eficientes, experimentação, projetos e conhecimento compartilhado.">
+
+    <meta name="theme-color" content="#0b1118">
 
     <style>
         * {
@@ -51,11 +53,13 @@
             justify-content: center;
             text-align: center;
             padding: 70px 7%;
-    background:
-    linear-gradient(rgba(5, 12, 20, 0.25),
-                    rgba(5, 12, 20, 0.40)),
-    url("Oficina%20de%20Eletr%C3%B4nica%20com%20Precis%C3%A3o.png")
-    center / cover no-repeat;
+            background:
+                linear-gradient(
+                    rgba(5, 12, 20, 0.25),
+                    rgba(5, 12, 20, 0.40)
+                ),
+                url("Oficina%20de%20Eletr%C3%B4nica%20com%20Precis%C3%A3o.png")
+                center / cover no-repeat;
         }
 
         .hero-content {
@@ -69,7 +73,7 @@
         }
 
         .hero p {
-            color: #c5d4e1;
+            color: #e0eaf3;
             font-size: clamp(1.05rem, 2.5vw, 1.35rem);
             margin-bottom: 30px;
         }
@@ -111,9 +115,35 @@
             max-width: 850px;
         }
 
+        .philosophy {
+            background: #101e2b;
+            border: 1px solid #26394b;
+            border-left: 4px solid #159ed0;
+            border-radius: 9px;
+            padding: 32px 25px;
+            margin-bottom: 55px;
+            text-align: center;
+        }
+
+        .philosophy blockquote {
+            color: #ffffff;
+            font-size: clamp(1.35rem, 3vw, 2rem);
+            font-weight: bold;
+            line-height: 1.5;
+            margin-bottom: 14px;
+        }
+
+        .philosophy p {
+            color: #c5d4e1;
+            margin: 0 auto;
+        }
+
         .cards {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            grid-template-columns: repeat(
+                auto-fit,
+                minmax(230px, 1fr)
+            );
             gap: 22px;
             margin-top: 25px;
         }
@@ -164,6 +194,10 @@
             main {
                 padding: 40px 20px;
             }
+
+            .philosophy {
+                padding: 25px 18px;
+            }
         }
     </style>
 </head>
@@ -177,71 +211,132 @@
     <section class="hero">
         <div class="hero-content">
             <h1>Sauerkraut Electronics</h1>
-            <p>Eletrônica, tecnologia e projetos autorais.</p>
-            <a href="#quem-somos" class="button">Conheça nosso trabalho</a>
+            <p>
+                Engenharia eletrônica, soluções práticas
+                e conhecimento compartilhado.
+            </p>
+            <a href="#quem-somos" class="button">
+                Conheça nosso trabalho
+            </a>
         </div>
     </section>
 
     <main>
+
+        <section class="philosophy" aria-label="Nossa filosofia">
+            <blockquote>
+                “A simplicidade é o último grau de sofisticação.”
+            </blockquote>
+            <p>
+                Identificar problemas, compreender o essencial
+                e desenvolver soluções eletrônicas simples e eficientes.
+            </p>
+        </section>
+
         <section id="quem-somos">
             <h2>Quem somos</h2>
-<p>
-    A Sauerkraut Electronics é um laboratório independente dedicado à engenharia eletrônica, à experimentação e ao desenvolvimento de projetos autorais. Exploramos circuitos, componentes e tecnologias, transformando ideias em experiências práticas. Também valorizamos a documentação dos projetos e o compartilhamento de conhecimento, porque acreditamos que aprender, testar e trocar experiências faz parte da própria engenharia.
-</p>
+            <p>
+                A Sauerkraut Electronics é um laboratório independente
+                dedicado à engenharia eletrônica, à experimentação e
+                ao desenvolvimento de projetos. Exploramos circuitos,
+                componentes e tecnologias, transformando ideias e
+                necessidades reais em experiências práticas.
+                Também testamos, reproduzimos e aprimoramos soluções
+                já existentes, valorizando a documentação dos projetos,
+                o reconhecimento do trabalho de outros autores e o
+                compartilhamento de conhecimento.
+            </p>
         </section>
 
         <section id="missao">
             <h2>Nossa missão</h2>
-<p>
-    Nossa missão é transformar ideias em projetos eletrônicos por meio da engenharia, da experimentação e da criatividade. Buscamos investigar tecnologias, desenvolver soluções, documentar nossos processos e compartilhar conhecimento, contribuindo para uma cultura de aprendizado contínuo e inovação.
-</p>
+            <p>
+                Nossa missão é identificar problemas e desenvolver
+                soluções eletrônicas simples, eficientes e funcionais.
+                Por meio da engenharia, da experimentação e da
+                criatividade, buscamos compreender cada desafio e
+                criar circuitos que resolvam o problema da maneira
+                mais simples possível, sem abrir mão da qualidade
+                e da confiabilidade. Também investigamos, testamos
+                e aprimoramos projetos existentes, documentando
+                os processos e compartilhando conhecimento com
+                respeito aos autores e às fontes originais.
+            </p>
         </section>
 
         <section id="objetivos">
             <h2>Nossos objetivos</h2>
 
             <div class="cards">
+
                 <article class="card">
-                    <h3>Desenvolvimento</h3>
+                    <h3>Soluções práticas</h3>
                     <p>
-                        Criar e explorar projetos eletrônicos, transformando
-                        ideias em soluções práticas.
+                        Identificar necessidades e desenvolver circuitos
+                        que resolvam problemas de forma simples,
+                        eficiente e funcional.
                     </p>
                 </article>
 
                 <article class="card">
-                    <h3>Conhecimento</h3>
+                    <h3>Experimentação e aprimoramento</h3>
                     <p>
-                        Documentar experiências e compartilhar aprendizados
-                        com outros entusiastas da eletrônica.
+                        Criar projetos próprios e testar, reproduzir
+                        e aperfeiçoar circuitos e soluções publicados
+                        por outros criadores, reconhecendo suas
+                        contribuições e respeitando as fontes originais.
                     </p>
                 </article>
 
                 <article class="card">
-                    <h3>Inovação</h3>
+                    <h3>Documentação e conhecimento</h3>
                     <p>
-                        Incentivar a criatividade e desenvolver novas ideias
-                        por meio da tecnologia.
+                        Registrar experiências, métodos, resultados
+                        e melhorias, compartilhando aprendizados
+                        que possam contribuir para outros projetos
+                        e para a comunidade de eletrônica.
                     </p>
                 </article>
+
             </div>
+        </section>
+
+        <section id="fundador">
+            <h2>A curiosidade que se transforma em engenharia</h2>
+            <p>
+                A Sauerkraut Electronics nasce da união entre
+                curiosidade científica, interesse por tecnologia
+                e vontade de compreender como as coisas funcionam.
+                Para seu fundador, Fábio Luna, a engenharia eletrônica
+                é uma maneira de investigar problemas, experimentar
+                ideias e transformar conhecimento em soluções
+                concretas. A música e os estudos de acústica,
+                difusão sonora e reverberação também fazem parte
+                dessa trajetória, ampliando o interesse por fenômenos
+                físicos e suas aplicações. Essa jornada continua
+                aberta a novas áreas, projetos e descobertas.
+            </p>
         </section>
 
         <section id="em-breve">
             <h2>Em breve</h2>
             <div class="coming-soon">
                 <p>
-                    Este espaço reunirá nossos projetos, publicações,
-                    materiais técnicos e novidades.
+                    Este espaço reunirá projetos, experimentos,
+                    publicações, materiais técnicos e registros
+                    do desenvolvimento de soluções eletrônicas.
                 </p>
             </div>
         </section>
+
     </main>
 
     <footer>
-        <p>&copy; 2026 Sauerkraut Electronics. Todos os direitos reservados.</p>
+        <p>
+            &copy; 2026 Sauerkraut Electronics.
+            Todos os direitos reservados.
+        </p>
     </footer>
 
 </body>
 </html>
-```
