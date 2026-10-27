@@ -170,7 +170,24 @@
             padding: 25px;
             border-radius: 5px;
         }
+        .contact-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 25px;
+        }
 
+        .contact-links .button {
+            text-align: center;
+        }
+
+        .button-email {
+            background: #26394b;
+        }
+
+        .button-email:hover {
+            background: #344e65;
+        }
         footer {
             background: #070c12;
             border-top: 1px solid #26394b;
@@ -328,7 +345,31 @@
                 </p>
             </div>
         </section>
+        <section id="contato">
+            <h2>Entre em contato</h2>
+            <p>
+                Tem uma ideia, uma dúvida ou um projeto para conversar?
+                Entre em contato com a Sauerkraut Electronics.
+            </p>
 
+            <div class="contact-links">
+                <a
+                    href="mailto:contato@sauerkrautelectronics.com.br"
+                    class="button button-email"
+                >
+                    Enviar e-mail
+                </a>
+
+                <a
+                    href="https://wa.me/5521966463524?text=Ol%C3%A1%21%20Conheci%20a%20Sauerkraut%20Electronics%20pelo%20site%20e%20gostaria%20de%20conversar."
+                    class="button"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Conversar pelo WhatsApp
+                </a>
+            </div>
+        </section>
     </main>
 
     <footer>
