@@ -93,11 +93,100 @@
             background: #087eaa;
         }
 
-        main {
-            max-width: 1100px;
-            margin: auto;
-            padding: 55px 25px;
-        }
+
+/* Estrutura principal: Explore, conteúdo e ofertas */
+.page-layout {
+    display: grid;
+    grid-template-columns: 220px minmax(0, 1fr) 240px;
+    gap: 25px;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 35px 25px;
+    align-items: start;
+}
+
+.explore-menu,
+.offers-panel {
+    background: #101a25;
+    border: 1px solid #26394b;
+    border-radius: 9px;
+    padding: 20px;
+}
+
+.explore-menu,
+.offers-panel {
+    position: sticky;
+    top: 20px;
+}
+
+.explore-menu h2,
+.offers-panel h2 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.explore-menu ul {
+    list-style: none;
+}
+
+.explore-menu li {
+    margin-bottom: 10px;
+}
+
+.explore-menu a {
+    color: #c5ced8;
+    text-decoration: none;
+}
+
+.explore-menu a:hover {
+    color: #48c3ee;
+}
+
+.offers-panel p {
+    color: #c5ced8;
+    font-size: 0.95rem;
+}
+
+.main-content {
+    min-width: 0;
+}
+
+.main-content main {
+    max-width: none;
+    margin: 0;
+    padding: 0;
+}
+
+@media (max-width: 1000px) {
+    .page-layout {
+        grid-template-columns: 190px minmax(0, 1fr);
+    }
+
+    .offers-panel {
+        grid-column: 1 / -1;
+        position: static;
+    }
+}
+
+@media (max-width: 600px) {
+    .page-layout {
+        display: flex;
+        flex-direction: column;
+        padding: 25px 15px;
+    }
+
+    .explore-menu,
+    .offers-panel,
+    .main-content {
+        width: 100%;
+        position: static;
+    }
+
+    .main-content main {
+        padding: 20px 5px;
+    }
+}
+
 
         section {
             margin-bottom: 55px;
@@ -238,7 +327,25 @@
         </div>
     </section>
 
-    <main>
+
+    <div class="page-layout">
+
+        <aside class="explore-menu">
+            <h2>Explore</h2>
+            <ul>
+                <li><a href="projetos-abertos.html">Projetos Abertos</a></li>
+                <li><a href="projetos-completos.html">Projetos Completos</a></li>
+                <li><a href="tutoriais-e-guias.html">Tutoriais e Guias</a></li>
+                <li><a href="dicas-e-tecnicas.html">Dicas e Técnicas</a></li>
+                <li><a href="arquivos-e-downloads.html">Arquivos e Downloads</a></li>
+                <li><a href="kits-e-produtos.html">Kits e Produtos</a></li>
+                <li><a href="componentes-e-fornecedores.html">Componentes e Fornecedores</a></li>
+                <li><a href="notas-e-referencias-tecnicas.html">Notas e Referências Técnicas</a></li>
+            </ul>
+        </aside>
+
+        <div class="main-content">
+            <main>
 
         <section class="philosophy" aria-label="Nossa filosofia">
             <blockquote>
@@ -370,9 +477,19 @@
                 </a>
             </div>
         </section>
-    </main>
+
+            </main>
+        </div>
+
+        <aside class="offers-panel">
+            <h2>Ofertas-relâmpago</h2>
+            <p>Em breve, ofertas e produtos selecionados para seus projetos eletrônicos.</p>
+        </aside>
+
+    </div>
 
     <footer>
+
         <p>
             &copy; 2026 Sauerkraut Electronics.
             Todos os direitos reservados.
