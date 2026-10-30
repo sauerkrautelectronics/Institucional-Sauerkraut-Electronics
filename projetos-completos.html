@@ -7,211 +7,141 @@
 
     <title>Projetos Completos | Sauerkraut Electronics</title>
 
-    <meta name="description" content="Conheça os projetos completos de eletrônica da Sauerkraut Electronics, com documentação e materiais para desenvolver suas próprias montagens.">
+    <meta name="description" content="Conheça os projetos completos da Sauerkraut Electronics, com documentação técnica, esquemas, arquivos e informações para montagem.">
 
     <style>
         * {
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
         }
 
         body {
             font-family: Arial, Helvetica, sans-serif;
             background: #0b1118;
-            color: #e5eaf0;
+            color: #e8edf3;
             line-height: 1.7;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
         }
 
         header {
             background: #101a25;
             border-bottom: 1px solid #26394b;
-            padding: 24px 20px;
-            text-align: center;
+            padding: 22px 7%;
         }
 
-        header h1 {
-            color: #48c3ee;
-            font-size: 1.8rem;
+        .logo {
+            color: #ffffff;
+            font-size: 1.4rem;
+            font-weight: bold;
+            letter-spacing: 1px;
         }
 
-        header p {
-            color: #c5ced8;
-            margin-top: 5px;
+        .logo span {
+            color: #42b9e8;
         }
 
-        .page-layout {
-            display: grid;
-            grid-template-columns: 220px minmax(0, 1fr) 240px;
-            gap: 25px;
-            max-width: 1600px;
+        main {
+            width: 100%;
+            max-width: 1000px;
             margin: 0 auto;
-            padding: 35px 25px;
-            align-items: start;
-        }
-
-        .explore-menu,
-        .offers-panel {
-            background: #101a25;
-            border: 1px solid #26394b;
-            border-radius: 9px;
-            padding: 20px;
-            position: sticky;
-            top: 20px;
-        }
-
-        .explore-menu h2,
-        .offers-panel h2 {
-            font-size: 1.2rem;
-            margin-bottom: 15px;
-            color: #48c3ee;
-        }
-
-        .explore-menu ul {
-            list-style: none;
-        }
-
-        .explore-menu li {
-            margin-bottom: 10px;
-        }
-
-        .explore-menu a {
-            color: #c5ced8;
-            text-decoration: none;
-            display: inline-block;
-            padding: 3px 0;
-        }
-
-        .explore-menu a:hover {
-            color: #48c3ee;
-        }
-
-        .main-content {
-            min-width: 0;
+            padding: 60px 25px;
+            flex: 1;
         }
 
         .breadcrumb {
-            font-size: 0.9rem;
+            margin-bottom: 30px;
+            font-size: 0.95rem;
+            color: #aab9c8;
+        }
+
+        a {
+            color: #48c3ee;
+        }
+
+        .intro {
+            margin-bottom: 35px;
+        }
+
+        h1 {
+            color: #ffffff;
+            font-size: clamp(2rem, 5vw, 3rem);
+            line-height: 1.2;
             margin-bottom: 20px;
-            color: #aab8c6;
         }
 
-        .breadcrumb a {
+        h2 {
             color: #48c3ee;
-            text-decoration: none;
-            display: inline-block;
-            padding: 5px 0;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
         }
 
-        .breadcrumb a:hover {
-            text-decoration: underline;
-        }
-
-        .intro,
-        .project-card {
-            background: #101a25;
-            border: 1px solid #26394b;
-            border-radius: 9px;
-            padding: 25px;
-            margin-bottom: 22px;
-        }
-
-        .intro h2 {
-            color: #48c3ee;
-            font-size: 1.8rem;
+        p {
+            color: #c5ced8;
             margin-bottom: 15px;
         }
 
-        .intro p,
-        .project-card p {
+        .coming-soon {
+            background: #101e2b;
+            border: 1px solid #26394b;
+            border-left: 4px solid #159ed0;
+            border-radius: 8px;
+            padding: 28px;
+            margin-top: 30px;
+        }
+
+        .project-details {
+            margin-top: 30px;
+        }
+
+        .project-details ul {
             color: #c5ced8;
-            margin-bottom: 12px;
+            padding-left: 25px;
+            margin-top: 12px;
         }
 
-        .project-card h3 {
-            color: #48c3ee;
-            margin-bottom: 10px;
-            font-size: 1.25rem;
+        .project-details li {
+            margin-bottom: 8px;
         }
 
-        .project-card .status {
+        .back-link {
             display: inline-block;
-            color: #c5ced8;
-            border: 1px solid #40566b;
+            margin-top: 25px;
+            background: #159ed0;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 12px 22px;
             border-radius: 5px;
-            padding: 3px 9px;
-            font-size: 0.85rem;
-            margin-bottom: 12px;
+            font-weight: bold;
         }
 
-        .offers-panel p {
-            color: #c5ced8;
-            font-size: 0.95rem;
+        .back-link:hover {
+            background: #087eaa;
         }
 
         footer {
-            background: #101a25;
+            background: #070c12;
             border-top: 1px solid #26394b;
-            padding: 25px 20px;
             text-align: center;
-            color: #c5ced8;
-        }
-
-        footer a {
-            color: #48c3ee;
-            text-decoration: none;
-            display: inline-block;
-            padding: 5px;
-        }
-
-        footer a:hover {
-            text-decoration: underline;
-        }
-
-        @media (max-width: 1000px) {
-            .page-layout {
-                grid-template-columns: 190px minmax(0, 1fr);
-            }
-
-            .offers-panel {
-                grid-column: 1 / -1;
-                position: static;
-            }
+            padding: 25px 20px;
+            color: #91a1b1;
+            font-size: 0.9rem;
         }
 
         @media (max-width: 600px) {
             header {
-                padding: 20px 15px;
+                text-align: center;
+                padding: 18px 12px;
             }
 
-            header h1 {
-                font-size: 1.5rem;
+            main {
+                padding: 40px 20px;
             }
 
-            .page-layout {
-                display: flex;
-                flex-direction: column;
-                padding: 25px 15px;
-            }
-
-            .explore-menu,
-            .offers-panel,
-            .main-content {
-                width: 100%;
-                position: static;
-            }
-
-            .explore-menu a {
-                padding: 6px 0;
-            }
-
-            .intro,
-            .project-card {
-                padding: 20px;
-            }
-
-            .intro h2 {
-                font-size: 1.5rem;
+            .coming-soon {
+                padding: 22px;
             }
         }
     </style>
@@ -220,96 +150,71 @@
 <body>
 
     <header>
-        <h1>Sauerkraut Electronics</h1>
-        <p>Eletrônica, conhecimento e projetos</p>
+        <div class="logo">SAUERKRAUT <span>ELECTRONICS</span></div>
     </header>
 
-    <div class="page-layout">
+    <main>
+        <nav class="breadcrumb" aria-label="Navegação">
+            <a href="index.html">Página inicial</a>
+            / Projetos Completos
+        </nav>
 
-        <aside class="explore-menu">
-            <h2>Explore</h2>
-            <ul>
-                <li><a href="/projetos-abertos.html">Projetos Abertos</a></li>
-                <li><a href="/projetos-completos.html">Projetos Completos</a></li>
-                <li><a href="/tutoriais-e-guias.html">Tutoriais e Guias</a></li>
-                <li><a href="/dicas-e-tecnicas.html">Dicas e Técnicas</a></li>
-                <li><a href="/arquivos-e-downloads.html">Arquivos e Downloads</a></li>
-                <li><a href="/kits-e-produtos.html">Kits e Produtos</a></li>
-                <li><a href="/componentes-e-fornecedores.html">Componentes e Fornecedores</a></li>
-                <li><a href="/notas-e-referencias-tecnicas.html">Notas e Referências Técnicas</a></li>
-            </ul>
-        </aside>
-
-        <div class="main-content">
-
-            <div class="breadcrumb">
-                <a href="/">← Voltar à página inicial</a>
-                / Projetos Completos
-            </div>
-
-            <section class="intro">
-                <h2>Projetos Completos</h2>
-
-                <p>
-                    Bem-vindo à área de Projetos Completos da Sauerkraut Electronics.
-                    Este espaço será dedicado a projetos de eletrônica organizados
-                    para facilitar o entendimento, a montagem e a consulta técnica.
-                </p>
-
-                <p>
-                    A proposta é reunir informações como objetivos, diagramas,
-                    lista de componentes, instruções de montagem, testes e
-                    documentação técnica, conforme cada projeto estiver disponível.
-                </p>
-            </section>
-
-            <section class="project-card">
-                <span class="status">Conteúdo em preparação</span>
-                <h3>Projetos documentados</h3>
-
-                <p>
-                    Esta seção será organizada com projetos que tenham documentação
-                    suficiente para acompanhar suas etapas de desenvolvimento e montagem.
-                </p>
-
-                <p>
-                    Novos conteúdos serão adicionados conforme forem preparados e revisados.
-                </p>
-            </section>
-
-            <section class="project-card">
-                <h3>O que cada projeto poderá incluir</h3>
-
-                <p>
-                    • Descrição e finalidade do circuito<br>
-                    • Esquema elétrico e diagramas<br>
-                    • Lista de componentes e especificações<br>
-                    • Orientações de montagem e testes<br>
-                    • Arquivos complementares e referências técnicas
-                </p>
-
-                <p>
-                    A disponibilidade desses materiais dependerá de cada projeto.
-                </p>
-            </section>
-
-        </div>
-
-        <aside class="offers-panel">
-            <h2>Ofertas-relâmpago</h2>
+        <section class="intro">
+            <h1>Projetos Completos</h1>
 
             <p>
-                Em breve, ofertas e produtos selecionados para seus projetos eletrônicos.
+                Este departamento reunirá projetos de eletrônica
+                desenvolvidos e documentados de forma completa,
+                com informações necessárias para sua compreensão,
+                montagem, reprodução e utilização.
             </p>
-        </aside>
 
-    </div>
+            <p>
+                A proposta é disponibilizar materiais organizados,
+                permitindo que estudantes, técnicos, engenheiros
+                e entusiastas possam estudar e desenvolver seus
+                próprios projetos a partir de documentação confiável.
+            </p>
+        </section>
+
+        <section class="coming-soon">
+            <h2>Conteúdo em preparação</h2>
+
+            <p>
+                Estamos preparando os primeiros projetos completos
+                para publicação. Em breve, este espaço contará com
+                documentação técnica e materiais para consulta.
+            </p>
+        </section>
+
+        <section class="project-details">
+            <h2>Projetos documentados</h2>
+
+            <p>
+                Conforme a natureza de cada projeto, sua publicação
+                poderá incluir:
+            </p>
+
+            <ul>
+                <li>Descrição e finalidade do projeto.</li>
+                <li>Esquemas elétricos e diagramas.</li>
+                <li>Lista de componentes e especificações técnicas.</li>
+                <li>Orientações de montagem e funcionamento.</li>
+                <li>Arquivos, códigos-fonte e materiais para download.</li>
+                <li>Testes, medições e resultados obtidos.</li>
+            </ul>
+        </section>
+
+        <a class="back-link" href="index.html">
+            Voltar à página inicial
+        </a>
+    </main>
 
     <footer>
         <p>
-            <a href="/">← Voltar à página inicial</a>
+            &copy; 2026 Sauerkraut Electronics.
+            Todos os direitos reservados.
         </p>
-        <p>&copy; Sauerkraut Electronics</p>
     </footer>
 
 </body>
