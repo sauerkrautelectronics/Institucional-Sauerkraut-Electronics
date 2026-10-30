@@ -5,104 +5,94 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Projetos Completos | Sauerkraut Electronics</title>
+    <title>Projetos Comerciais | Sauerkraut Electronics</title>
 
-    <meta name="description" content="Conheça os projetos completos da Sauerkraut Electronics, com documentação técnica, esquemas, arquivos e informações para montagem.">
+    <meta name="description" content="Conheça as soluções comerciais da Sauerkraut Electronics e suas modalidades de fornecimento.">
 
     <style>
         * {
             box-sizing: border-box;
-            margin: 0;
-            padding: 0;
         }
 
         body {
-            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
             background: #0b1118;
-            color: #e8edf3;
-            line-height: 1.7;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
+            color: #e8eef5;
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
         }
 
         header {
             background: #101a25;
-            border-bottom: 1px solid #26394b;
-            padding: 22px 7%;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 1px solid #263747;
         }
 
-        .logo {
-            color: #ffffff;
-            font-size: 1.4rem;
-            font-weight: bold;
-            letter-spacing: 1px;
-        }
-
-        .logo span {
-            color: #42b9e8;
+        header img {
+            max-width: 220px;
+            height: auto;
         }
 
         main {
-            width: 100%;
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 60px 25px;
-            flex: 1;
+            max-width: 900px;
+            margin: 35px auto;
+            padding: 0 25px;
         }
 
         .breadcrumb {
-            margin-bottom: 30px;
-            font-size: 0.95rem;
-            color: #aab9c8;
+            margin-bottom: 25px;
+            color: #aab8c6;
+            font-size: 14px;
         }
 
-        a {
-            color: #48c3ee;
-        }
-
-        .intro {
-            margin-bottom: 35px;
+        .breadcrumb a {
+            color: #42b9e8;
+            text-decoration: none;
         }
 
         h1 {
-            color: #ffffff;
-            font-size: clamp(2rem, 5vw, 3rem);
-            line-height: 1.2;
+            color: #48c3ee;
             margin-bottom: 20px;
         }
 
         h2 {
-            color: #48c3ee;
+            color: #42b9e8;
+            margin-top: 35px;
             margin-bottom: 15px;
-            font-size: 1.5rem;
+        }
+
+        h3 {
+            color: #48c3ee;
+            margin-bottom: 10px;
         }
 
         p {
-            color: #c5ced8;
-            margin-bottom: 15px;
+            margin-bottom: 18px;
         }
 
-        .coming-soon {
-            background: #101e2b;
-            border: 1px solid #26394b;
+        .notice {
+            background: #101a25;
             border-left: 4px solid #159ed0;
-            border-radius: 8px;
-            padding: 28px;
-            margin-top: 30px;
+            padding: 18px 22px;
+            margin: 25px 0;
+            border-radius: 5px;
         }
 
-        .project-details {
-            margin-top: 30px;
+        .project-card {
+            background: #101a25;
+            border: 1px solid #263747;
+            border-radius: 6px;
+            padding: 22px;
+            margin-bottom: 20px;
         }
 
-        .project-details ul {
-            color: #c5ced8;
-            padding-left: 25px;
-            margin-top: 12px;
+        .project-card ul {
+            padding-left: 22px;
         }
 
-        .project-details li {
+        .project-card li {
             margin-bottom: 8px;
         }
 
@@ -122,26 +112,27 @@
         }
 
         footer {
-            background: #070c12;
-            border-top: 1px solid #26394b;
             text-align: center;
-            padding: 25px 20px;
-            color: #91a1b1;
-            font-size: 0.9rem;
+            padding: 22px;
+            margin-top: 45px;
+            background: #101a25;
+            border-top: 1px solid #263747;
+            color: #aab8c6;
+            font-size: 13px;
         }
 
         @media (max-width: 600px) {
-            header {
-                text-align: center;
-                padding: 18px 12px;
-            }
-
             main {
-                padding: 40px 20px;
+                padding: 0 18px;
+                margin: 25px auto;
             }
 
-            .coming-soon {
-                padding: 22px;
+            header img {
+                max-width: 180px;
+            }
+
+            .project-card {
+                padding: 18px;
             }
         }
     </style>
@@ -150,71 +141,121 @@
 <body>
 
     <header>
-        <div class="logo">SAUERKRAUT <span>ELECTRONICS</span></div>
+        <img src="logo.png" alt="Sauerkraut Electronics">
     </header>
 
     <main>
-        <nav class="breadcrumb" aria-label="Navegação">
-            <a href="index.html">Página inicial</a>
-            / Projetos Completos
-        </nav>
 
-        <section class="intro">
-            <h1>Projetos Completos</h1>
+        <div class="breadcrumb">
+            <a href="index.html">Página inicial</a> / Projetos Comerciais
+        </div>
 
+        <h1>Projetos Comerciais</h1>
+
+        <p>
+            Nesta seção apresentamos soluções eletrônicas desenvolvidas pela
+            Sauerkraut Electronics para comercialização. São projetos concebidos
+            para atender necessidades específicas, com diferentes modalidades
+            de fornecimento, de acordo com o conhecimento técnico e as
+            necessidades de cada comprador.
+        </p>
+
+        <div class="notice">
+            <strong>Soluções em desenvolvimento</strong>
             <p>
-                Este departamento reunirá projetos de eletrônica
-                desenvolvidos e documentados de forma completa,
-                com informações necessárias para sua compreensão,
-                montagem, reprodução e utilização.
+                Esta seção será atualizada à medida que novas soluções comerciais
+                forem desenvolvidas, testadas e disponibilizadas.
             </p>
+        </div>
+
+        <h2>Modalidades de fornecimento</h2>
+
+        <div class="project-card">
+            <h3>1. Equipamento pronto para instalação</h3>
 
             <p>
-                A proposta é disponibilizar materiais organizados,
-                permitindo que estudantes, técnicos, engenheiros
-                e entusiastas possam estudar e desenvolver seus
-                próprios projetos a partir de documentação confiável.
-            </p>
-        </section>
-
-        <section class="coming-soon">
-            <h2>Conteúdo em preparação</h2>
-
-            <p>
-                Estamos preparando os primeiros projetos completos
-                para publicação. Em breve, este espaço contará com
-                documentação técnica e materiais para consulta.
-            </p>
-        </section>
-
-        <section class="project-details">
-            <h2>Projetos documentados</h2>
-
-            <p>
-                Conforme a natureza de cada projeto, sua publicação
-                poderá incluir:
+                Solução fornecida totalmente montada e testada, pronta para ser
+                instalada e utilizada.
             </p>
 
             <ul>
-                <li>Descrição e finalidade do projeto.</li>
-                <li>Esquemas elétricos e diagramas.</li>
-                <li>Lista de componentes e especificações técnicas.</li>
-                <li>Orientações de montagem e funcionamento.</li>
-                <li>Arquivos, códigos-fonte e materiais para download.</li>
-                <li>Testes, medições e resultados obtidos.</li>
+                <li>Equipamento montado e testado;</li>
+                <li>Manual de instalação;</li>
+                <li>Orientações básicas de utilização.</li>
             </ul>
-        </section>
+        </div>
+
+        <div class="project-card">
+            <h3>2. Kit para montagem</h3>
+
+            <p>
+                Modalidade destinada a pessoas que possuem conhecimentos de
+                eletrônica e desejam realizar a montagem do equipamento.
+            </p>
+
+            <ul>
+                <li>Placa de circuito impresso e componentes necessários;</li>
+                <li>Manual de montagem;</li>
+                <li>Procedimentos de testes e verificação;</li>
+                <li>Manual de instalação.</li>
+            </ul>
+        </div>
+
+        <div class="project-card">
+            <h3>3. PCB e microcontrolador programado</h3>
+
+            <p>
+                Modalidade destinada a usuários com conhecimentos avançados
+                em eletrônica, que desejam integrar a solução aos seus próprios
+                sistemas.
+            </p>
+
+            <ul>
+                <li>Placa de circuito impresso;</li>
+                <li>Microcontrolador fornecido com firmware proprietário;</li>
+                <li>Código desenvolvido, testado e protegido contra leitura direta;</li>
+                <li>Orientações para integração e instalação.</li>
+            </ul>
+
+            <h3>Firmware proprietário e substituição do microcontrolador</h3>
+
+            <p>
+                O microcontrolador é fornecido com firmware proprietário da
+                Sauerkraut Electronics, desenvolvido, testado e protegido contra
+                leitura e cópia direta, conforme os recursos de segurança
+                disponíveis no componente.
+            </p>
+
+            <p>
+                O comprador poderá reutilizar o microcontrolador para gravar
+                seu próprio firmware. Entretanto, essa operação poderá apagar
+                definitivamente o código original.
+            </p>
+
+            <p>
+                <strong>
+                    A Sauerkraut Electronics não fornece o arquivo original de
+                    programação (.hex), não realiza a regravação de
+                    microcontroladores fornecidos anteriormente e não oferece
+                    serviço de recuperação do firmware.
+                </strong>
+            </p>
+
+            <p>
+                Caso o código original seja apagado ou substituído, e o comprador
+                deseje voltar a utilizar a solução da Sauerkraut, deverá adquirir
+                um novo microcontrolador programado pela empresa.
+            </p>
+        </div>
 
         <a class="back-link" href="index.html">
             Voltar à página inicial
         </a>
+
     </main>
 
     <footer>
-        <p>
-            &copy; 2026 Sauerkraut Electronics.
-            Todos os direitos reservados.
-        </p>
+        © 2026 Sauerkraut Electronics. Todos os direitos reservados.
     </footer>
 
 </body>
