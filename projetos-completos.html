@@ -78,6 +78,8 @@
         .explore-menu a {
             color: #c5ced8;
             text-decoration: none;
+            display: inline-block;
+            padding: 3px 0;
         }
 
         .explore-menu a:hover {
@@ -97,6 +99,12 @@
         .breadcrumb a {
             color: #48c3ee;
             text-decoration: none;
+            display: inline-block;
+            padding: 5px 0;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
         }
 
         .intro,
@@ -152,6 +160,12 @@
         footer a {
             color: #48c3ee;
             text-decoration: none;
+            display: inline-block;
+            padding: 5px;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
         }
 
         @media (max-width: 1000px) {
@@ -187,6 +201,10 @@
                 position: static;
             }
 
+            .explore-menu a {
+                padding: 6px 0;
+            }
+
             .intro,
             .project-card {
                 padding: 20px;
@@ -211,21 +229,22 @@
         <aside class="explore-menu">
             <h2>Explore</h2>
             <ul>
-                <li><a href="projetos-abertos.html">Projetos Abertos</a></li>
-                <li><a href="projetos-completos.html">Projetos Completos</a></li>
-                <li><a href="tutoriais-e-guias.html">Tutoriais e Guias</a></li>
-                <li><a href="dicas-e-tecnicas.html">Dicas e Técnicas</a></li>
-                <li><a href="arquivos-e-downloads.html">Arquivos e Downloads</a></li>
-                <li><a href="kits-e-produtos.html">Kits e Produtos</a></li>
-                <li><a href="componentes-e-fornecedores.html">Componentes e Fornecedores</a></li>
-                <li><a href="notas-e-referencias-tecnicas.html">Notas e Referências Técnicas</a></li>
+                <li><a href="/projetos-abertos.html">Projetos Abertos</a></li>
+                <li><a href="/projetos-completos.html">Projetos Completos</a></li>
+                <li><a href="/tutoriais-e-guias.html">Tutoriais e Guias</a></li>
+                <li><a href="/dicas-e-tecnicas.html">Dicas e Técnicas</a></li>
+                <li><a href="/arquivos-e-downloads.html">Arquivos e Downloads</a></li>
+                <li><a href="/kits-e-produtos.html">Kits e Produtos</a></li>
+                <li><a href="/componentes-e-fornecedores.html">Componentes e Fornecedores</a></li>
+                <li><a href="/notas-e-referencias-tecnicas.html">Notas e Referências Técnicas</a></li>
             </ul>
         </aside>
 
         <div class="main-content">
 
             <div class="breadcrumb">
-                <a href="index.html">Início</a> / Projetos Completos
+                <a href="/">← Voltar à página inicial</a>
+                / Projetos Completos
             </div>
 
             <section class="intro">
@@ -288,7 +307,7 @@
 
     <footer>
         <p>
-            <a href="index.html">Voltar à página inicial</a>
+            <a href="/">← Voltar à página inicial</a>
         </p>
         <p>&copy; Sauerkraut Electronics</p>
     </footer>
