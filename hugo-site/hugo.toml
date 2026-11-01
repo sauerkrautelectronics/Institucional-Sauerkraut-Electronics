@@ -1,0 +1,6 @@
+baseURL = 'https://sauerkrautelectronics.com.br/'
+locale = 'pt-br'
+defaultContentLanguage = 'pt-br'
+title = 'Sauerkraut Electronics'
+
+disableKinds = ['taxonomy', 'term']
