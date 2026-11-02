@@ -1,0 +1,180 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ .Title }} | Sauerkraut Electronics</title>
+    <meta name="description" content="{{ .Description }}">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background: #0b1118;
+            color: #e8eef5;
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #101a25;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 1px solid #263747;
+        }
+
+        .logo {
+            color: #ffffff;
+            font-size: 1.4rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: #42b9e8;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 35px auto;
+            padding: 0 25px;
+        }
+
+        .breadcrumb {
+            margin-bottom: 25px;
+            color: #aab8c6;
+            font-size: 14px;
+        }
+
+        .breadcrumb a {
+            color: #42b9e8;
+            text-decoration: none;
+        }
+
+        h1 {
+            color: #48c3ee;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: #42b9e8;
+            margin-top: 35px;
+            margin-bottom: 15px;
+        }
+
+        h3 {
+            color: #48c3ee;
+            margin-bottom: 10px;
+        }
+
+        p {
+            margin-bottom: 18px;
+        }
+
+        .notice {
+            background: #101a25;
+            border-left: 4px solid #159ed0;
+            padding: 18px 22px;
+            margin: 25px 0;
+            border-radius: 5px;
+        }
+
+        .project-card {
+            background: #101a25;
+            border: 1px solid #263747;
+            border-radius: 6px;
+            padding: 22px;
+            margin-bottom: 20px;
+        }
+
+	.important {
+            background: #101e2b;
+            border: 1px solid #26394b;
+            border-left: 4px solid #159ed0;
+            border-radius: 8px;
+            padding: 22px;
+            margin: 25px 0;
+	}
+
+        ul {
+            padding-left: 22px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 25px;
+            background: #159ed0;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 12px 22px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .back-link:hover {
+            background: #087eaa;
+        }
+
+        footer {
+            text-align: center;
+            padding: 22px;
+            margin-top: 45px;
+            background: #101a25;
+            border-top: 1px solid #263747;
+            color: #aab8c6;
+            font-size: 13px;
+        }
+
+        @media (max-width: 600px) {
+            main {
+                padding: 0 18px;
+                margin: 25px auto;
+            }
+
+            header {
+                padding: 18px 12px;
+            }
+
+            .project-card {
+                padding: 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">SAUERKRAUT <span>ELECTRONICS</span></div>
+    </header>
+
+    <main>
+        <nav class="breadcrumb" aria-label="Navegação">
+            <a href="/">Página inicial</a>
+            / {{ .Title }}
+        </nav>
+
+        <h1>{{ .Title }}</h1>
+
+        <div class="page-content">
+            {{ .Content }}
+        </div>
+
+        <a class="back-link" href="/">
+            Voltar à página inicial
+        </a>
+    </main>
+
+    <footer>
+        © 2026 Sauerkraut Electronics. Todos os direitos reservados.
+    </footer>
+</body>
+</html>

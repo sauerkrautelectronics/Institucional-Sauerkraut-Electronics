@@ -4,3 +4,5 @@ defaultContentLanguage = 'pt-br'
 title = 'Sauerkraut Electronics'
 
 disableKinds = ['taxonomy', 'term']
+[markup.goldmark.renderer]
+unsafe = true
