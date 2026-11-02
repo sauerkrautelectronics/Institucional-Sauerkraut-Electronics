@@ -5,6 +5,7 @@ draft = false
 type = 'projetos'
 layout = 'abertos'
 url = '/projetos-abertos.html'
+outputs = ['HTML']
 +++
 
 Este departamento reunirá projetos de eletrônica disponibilizados para estudo, experimentação, reprodução e aprimoramento.
