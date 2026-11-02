@@ -1,13 +1,12 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Sauerkraut Electronics | Engenharia Eletrônica e Soluções</title>
+    <title>{{ .Params.homepage.document_title }}</title>
 
-    <meta name="description" content="Sauerkraut Electronics: laboratório independente de engenharia eletrônica, soluções simples e eficientes, experimentação, projetos e conhecimento compartilhado.">
+    <meta name="description" content="{{ .Description }}">
 
     <meta name="theme-color" content="#0b1118">
 
@@ -93,100 +92,98 @@
             background: #087eaa;
         }
 
+        /* Estrutura principal: Explore, conteúdo e ofertas */
+        .page-layout {
+            display: grid;
+            grid-template-columns: 220px minmax(0, 1fr) 240px;
+            gap: 25px;
+            max-width: 1600px;
+            margin: 0 auto;
+            padding: 35px 25px;
+            align-items: start;
+        }
 
-/* Estrutura principal: Explore, conteúdo e ofertas */
-.page-layout {
-    display: grid;
-    grid-template-columns: 220px minmax(0, 1fr) 240px;
-    gap: 25px;
-    max-width: 1600px;
-    margin: 0 auto;
-    padding: 35px 25px;
-    align-items: start;
-}
+        .explore-menu,
+        .offers-panel {
+            background: #101a25;
+            border: 1px solid #26394b;
+            border-radius: 9px;
+            padding: 20px;
+        }
 
-.explore-menu,
-.offers-panel {
-    background: #101a25;
-    border: 1px solid #26394b;
-    border-radius: 9px;
-    padding: 20px;
-}
+        .explore-menu,
+        .offers-panel {
+            position: sticky;
+            top: 20px;
+        }
 
-.explore-menu,
-.offers-panel {
-    position: sticky;
-    top: 20px;
-}
+        .explore-menu h2,
+        .offers-panel h2 {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+        }
 
-.explore-menu h2,
-.offers-panel h2 {
-    font-size: 1.2rem;
-    margin-bottom: 15px;
-}
+        .explore-menu ul {
+            list-style: none;
+        }
 
-.explore-menu ul {
-    list-style: none;
-}
+        .explore-menu li {
+            margin-bottom: 10px;
+        }
 
-.explore-menu li {
-    margin-bottom: 10px;
-}
+        .explore-menu a {
+            color: #c5ced8;
+            text-decoration: none;
+        }
 
-.explore-menu a {
-    color: #c5ced8;
-    text-decoration: none;
-}
+        .explore-menu a:hover {
+            color: #48c3ee;
+        }
 
-.explore-menu a:hover {
-    color: #48c3ee;
-}
+        .offers-panel p {
+            color: #c5ced8;
+            font-size: 0.95rem;
+        }
 
-.offers-panel p {
-    color: #c5ced8;
-    font-size: 0.95rem;
-}
+        .main-content {
+            min-width: 0;
+        }
 
-.main-content {
-    min-width: 0;
-}
+        .main-content main {
+            max-width: none;
+            margin: 0;
+            padding: 0;
+        }
 
-.main-content main {
-    max-width: none;
-    margin: 0;
-    padding: 0;
-}
+        @media (max-width: 1000px) {
+            .page-layout {
+                grid-template-columns: 190px minmax(0, 1fr);
+            }
 
-@media (max-width: 1000px) {
-    .page-layout {
-        grid-template-columns: 190px minmax(0, 1fr);
-    }
+            .offers-panel {
+                grid-column: 1 / -1;
+                position: static;
+            }
+        }
 
-    .offers-panel {
-        grid-column: 1 / -1;
-        position: static;
-    }
-}
+        @media (max-width: 600px) {
+            .page-layout {
+                display: flex;
+                flex-direction: column;
+                padding: 25px 15px;
+            }
 
-@media (max-width: 600px) {
-    .page-layout {
-        display: flex;
-        flex-direction: column;
-        padding: 25px 15px;
-    }
+            .explore-menu,
+            .offers-panel,
+            .main-content {
+                width: 100%;
+                position: static;
+            }
 
-    .explore-menu,
-    .offers-panel,
-    .main-content {
-        width: 100%;
-        position: static;
-    }
-
-    .main-content main {
-        padding: 20px 5px;
-    }
-}
-
+            .main-content main {
+                padding: 20px 5px;
+            }
+        }
 
         section {
             margin-bottom: 55px;
@@ -259,6 +256,7 @@
             padding: 25px;
             border-radius: 5px;
         }
+
         .contact-links {
             display: flex;
             flex-wrap: wrap;
@@ -277,6 +275,7 @@
         .button-email:hover {
             background: #344e65;
         }
+
         footer {
             background: #070c12;
             border-top: 1px solid #26394b;
@@ -316,183 +315,107 @@
 
     <section class="hero">
         <div class="hero-content">
-            <h1>Sauerkraut Electronics</h1>
-            <p>
-                Engenharia eletrônica, soluções práticas
-                e conhecimento compartilhado.
-            </p>
-            <a href="#quem-somos" class="button">
-                Conheça nosso trabalho
+            <h1>{{ .Params.homepage.hero_title }}</h1>
+            <p>{{ .Params.homepage.hero_text }}</p>
+            <a href="{{ .Params.homepage.hero_target }}" class="button">
+                {{ .Params.homepage.hero_button }}
             </a>
         </div>
     </section>
 
-
     <div class="page-layout">
 
         <aside class="explore-menu">
-            <h2>Explore</h2>
+            <h2>{{ .Params.homepage.navigation_title }}</h2>
             <ul>
-                <li><a href="/projetos-abertos.html">Projetos Abertos</a></li>
-                <li><a href="/projetos-comerciais.html">Projetos Comerciais</a></li>
-                <li><a href="/tutoriais-e-guias/">Tutoriais e Guias</a></li>
-                <li><a href="/dicas-e-tecnicas/">Dicas e Técnicas</a></li>
-                <li><a href="/arquivos-e-downloads/">Arquivos e Downloads</a></li>
-                <li><a href="/kits-e-produtos/">Kits e Produtos</a></li>
-                <li><a href="/notas-e-referencias-tecnicas/">Notas e Referências Técnicas</a></li>
+                {{ range .Params.homepage.navigation }}
+                <li><a href="{{ .url }}">{{ .label }}</a></li>
+                {{ end }}
             </ul>
         </aside>
 
         <div class="main-content">
             <main>
 
-        <section class="philosophy" aria-label="Nossa filosofia">
-            <blockquote>
-                “A simplicidade é o último grau de sofisticação.”
-            </blockquote>
-            <p>
-                Identificar problemas, compreender o essencial
-                e desenvolver soluções eletrônicas simples e eficientes.
-            </p>
-        </section>
-
-        <section id="quem-somos">
-            <h2>Quem somos</h2>
-            <p>
-                A Sauerkraut Electronics é um laboratório independente
-                dedicado à engenharia eletrônica, à experimentação e
-                ao desenvolvimento de projetos. Exploramos circuitos,
-                componentes e tecnologias, transformando ideias e
-                necessidades reais em experiências práticas.
-                Também testamos, reproduzimos e aprimoramos soluções
-                já existentes, valorizando a documentação dos projetos,
-                o reconhecimento do trabalho de outros autores e o
-                compartilhamento de conhecimento.
-            </p>
-        </section>
-
-        <section id="missao">
-            <h2>Nossa missão</h2>
-            <p>
-                Nossa missão é identificar problemas e desenvolver
-                soluções eletrônicas simples, eficientes e funcionais.
-                Por meio da engenharia, da experimentação e da
-                criatividade, buscamos compreender cada desafio e
-                criar circuitos que resolvam o problema da maneira
-                mais simples possível, sem abrir mão da qualidade
-                e da confiabilidade. Também investigamos, testamos
-                e aprimoramos projetos existentes, documentando
-                os processos e compartilhando conhecimento com
-                respeito aos autores e às fontes originais.
-            </p>
-        </section>
-
-        <section id="objetivos">
-            <h2>Nossos objetivos</h2>
-
-            <div class="cards">
-
-                <article class="card">
-                    <h3>Soluções práticas</h3>
+                <section class="philosophy" aria-label="{{ .Params.homepage.philosophy_label }}">
+                    <blockquote>
+                        {{ .Params.homepage.philosophy_quote }}
+                    </blockquote>
                     <p>
-                        Identificar necessidades e desenvolver circuitos
-                        que resolvam problemas de forma simples,
-                        eficiente e funcional.
+                        {{ .Params.homepage.philosophy_text }}
                     </p>
-                </article>
+                </section>
 
-                <article class="card">
-                    <h3>Experimentação e aprimoramento</h3>
-                    <p>
-                        Criar projetos próprios e testar, reproduzir
-                        e aperfeiçoar circuitos e soluções publicados
-                        por outros criadores, reconhecendo suas
-                        contribuições e respeitando as fontes originais.
-                    </p>
-                </article>
+                <section id="quem-somos">
+                    <h2>{{ .Params.homepage.who_title }}</h2>
+                    <p>{{ .Params.homepage.who_text }}</p>
+                </section>
 
-                <article class="card">
-                    <h3>Documentação e conhecimento</h3>
-                    <p>
-                        Registrar experiências, métodos, resultados
-                        e melhorias, compartilhando aprendizados
-                        que possam contribuir para outros projetos
-                        e para a comunidade de eletrônica.
-                    </p>
-                </article>
+                <section id="missao">
+                    <h2>{{ .Params.homepage.mission_title }}</h2>
+                    <p>{{ .Params.homepage.mission_text }}</p>
+                </section>
 
-            </div>
-        </section>
+                <section id="objetivos">
+                    <h2>{{ .Params.homepage.objectives_title }}</h2>
 
-        <section id="fundador">
-            <h2>A curiosidade que se transforma em engenharia</h2>
-            <p>
-                A Sauerkraut Electronics nasce da união entre
-                curiosidade científica, interesse por tecnologia
-                e vontade de compreender como as coisas funcionam.
-                Para seu fundador, Fábio Luna, a engenharia eletrônica
-                é uma maneira de investigar problemas, experimentar
-                ideias e transformar conhecimento em soluções
-                concretas. A música e os estudos de acústica,
-                difusão sonora e reverberação também fazem parte
-                dessa trajetória, ampliando o interesse por fenômenos
-                físicos e suas aplicações. Essa jornada continua
-                aberta a novas áreas, projetos e descobertas.
-            </p>
-        </section>
+                    <div class="cards">
+                        {{ range .Params.homepage.objectives }}
+                        <article class="card">
+                            <h3>{{ .title }}</h3>
+                            <p>{{ .text }}</p>
+                        </article>
+                        {{ end }}
+                    </div>
+                </section>
 
-        <section id="em-breve">
-            <h2>Em breve</h2>
-            <div class="coming-soon">
-                <p>
-                    Este espaço reunirá projetos, experimentos,
-                    publicações, materiais técnicos e registros
-                    do desenvolvimento de soluções eletrônicas.
-                </p>
-            </div>
-        </section>
-        <section id="contato">
-            <h2>Entre em contato</h2>
-            <p>
-                Tem uma ideia, uma dúvida ou um projeto para conversar?
-                Entre em contato com a Sauerkraut Electronics.
-            </p>
+                <section id="fundador">
+                    <h2>{{ .Params.homepage.founder_title }}</h2>
+                    <p>{{ .Params.homepage.founder_text }}</p>
+                </section>
 
-            <div class="contact-links">
-                <a
-                    href="mailto:contato@sauerkrautelectronics.com.br"
-                    class="button button-email"
-                >
-                    Enviar e-mail
-                </a>
+                <section id="em-breve">
+                    <h2>{{ .Params.homepage.coming_title }}</h2>
+                    <div class="coming-soon">
+                        <p>{{ .Params.homepage.coming_text }}</p>
+                    </div>
+                </section>
 
-                <a
-                    href="https://wa.me/5521966463524?text=Ol%C3%A1%21%20Conheci%20a%20Sauerkraut%20Electronics%20pelo%20site%20e%20gostaria%20de%20conversar."
-                    class="button"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Conversar pelo WhatsApp
-                </a>
-            </div>
-        </section>
+                <section id="contato">
+                    <h2>{{ .Params.homepage.contact_title }}</h2>
+                    <p>{{ .Params.homepage.contact_text }}</p>
+
+                    <div class="contact-links">
+                        <a
+                            href="mailto:{{ .Params.homepage.contact_email }}"
+                            class="button button-email"
+                        >
+                            {{ .Params.homepage.contact_email_button }}
+                        </a>
+
+                        <a
+                            href="{{ .Params.homepage.contact_whatsapp }}"
+                            class="button"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            {{ .Params.homepage.contact_whatsapp_button }}
+                        </a>
+                    </div>
+                </section>
 
             </main>
         </div>
 
         <aside class="offers-panel">
-            <h2>Ofertas-relâmpago</h2>
-            <p>Em breve, ofertas e produtos selecionados para seus projetos eletrônicos.</p>
+            <h2>{{ .Params.homepage.offers_title }}</h2>
+            <p>{{ .Params.homepage.offers_text }}</p>
         </aside>
 
     </div>
 
     <footer>
-
-        <p>
-            &copy; 2026 Sauerkraut Electronics.
-            Todos os direitos reservados.
-        </p>
+        <p>{{ .Params.homepage.footer_text }}</p>
     </footer>
 
 </body>
