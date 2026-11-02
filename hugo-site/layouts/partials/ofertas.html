@@ -1,0 +1,57 @@
+
+{{- $dados := hugo.Data.ofertas -}}
+{{- $ofertas := $dados.ofertas | default slice -}}
+
+<aside class="offers-panel" aria-label="{{ $dados.titulo }}">
+    <h2>{{ $dados.titulo }}</h2>
+
+    {{ if gt (len $ofertas) 0 }}
+        <div class="offers-carousel" data-offers-carousel>
+            {{ range $index, $oferta := $ofertas }}
+                <article
+                    class="offer-item"
+                    data-offer-item
+                    {{ if ne $index 0 }}hidden{{ end }}
+                >
+                    {{ with $oferta.imagem }}
+                        <img
+                            src="{{ . | relURL }}"
+                            alt="{{ $oferta.titulo }}"
+                            class="offer-image"
+                        >
+                    {{ end }}
+
+                    <h3>{{ $oferta.titulo }}</h3>
+
+                    {{ with $oferta.descricao }}
+                        <p>{{ . }}</p>
+                    {{ end }}
+
+                    {{ with $oferta.preco }}
+                        <p class="offer-price">{{ . }}</p>
+                    {{ end }}
+
+                    {{ with $oferta.link }}
+                        <a class="offer-link" href="{{ . }}">
+                            Conhecer oferta
+                        </a>
+                    {{ end }}
+                </article>
+            {{ end }}
+
+            <div class="offer-controls">
+                <button type="button" data-offer-prev aria-label="Oferta anterior">
+                    &#8592;
+                </button>
+
+                <span data-offer-counter>1 / {{ len $ofertas }}</span>
+
+                <button type="button" data-offer-next aria-label="Próxima oferta">
+                    &#8594;
+                </button>
+            </div>
+        </div>
+    {{ else }}
+        <p>{{ $dados.mensagem_padrao }}</p>
+    {{ end }}
+</aside>

@@ -1,10 +1,16 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>{{ .Title }} | Sauerkraut Electronics</title>
     <meta name="description" content="{{ .Description }}">
+
+    <link rel="stylesheet" href="{{ "css/ofertas.css" | relURL }}">
+    <script src="{{ "js/ofertas.js" | relURL }}" defer></script>
+
     <style>
         * {
             box-sizing: border-box;
@@ -39,12 +45,29 @@
             color: #42b9e8;
         }
 
+        .projects-layout {
+            width: 100%;
+            max-width: 1700px;
+            margin: 0 auto;
+            padding: 40px 25px;
+            display: grid;
+            grid-template-columns: 220px minmax(0, 1fr) 220px;
+            gap: 25px;
+            align-items: start;
+            flex: 1;
+        }
+
+        .projects-layout > .offers-panel {
+            position: sticky;
+            top: 20px;
+        }
+
         main {
             width: 100%;
+            min-width: 0;
             max-width: 1000px;
             margin: 0 auto;
-            padding: 60px 25px;
-            flex: 1;
+            padding: 20px 0;
         }
 
         .breadcrumb {
@@ -112,14 +135,35 @@
             font-size: 0.9rem;
         }
 
+        @media (max-width: 1100px) {
+            .projects-layout {
+                grid-template-columns: minmax(0, 1fr);
+                max-width: 850px;
+            }
+
+            .projects-layout > .offers-panel {
+                position: static;
+            }
+
+            main {
+                max-width: none;
+                padding: 20px 0;
+            }
+        }
+
         @media (max-width: 600px) {
             header {
                 text-align: center;
                 padding: 18px 12px;
             }
 
+            .projects-layout {
+                padding: 25px 15px;
+                gap: 20px;
+            }
+
             main {
-                padding: 40px 20px;
+                padding: 20px 5px;
             }
 
             .coming-soon {
@@ -134,22 +178,29 @@
         <div class="logo">SAUERKRAUT <span>ELECTRONICS</span></div>
     </header>
 
-    <main>
-        <nav class="breadcrumb" aria-label="Navegação">
-            <a href="/">Página inicial</a>
-            / {{ .Title }}
-        </nav>
+    <div class="projects-layout">
 
-        <section class="intro">
-            <h1>{{ .Title }}</h1>
-            {{ .Content }}
-        </section>
+        {{ partial "ofertas.html" . }}
 
+        <main>
+            <nav class="breadcrumb" aria-label="Navegação">
+                <a href="{{ "/" | relURL }}">Página inicial</a>
+                / {{ .Title }}
+            </nav>
 
-        <a class="back-link" href="/">
-            Voltar à página inicial
-        </a>
-    </main>
+            <section class="intro">
+                <h1>{{ .Title }}</h1>
+                {{ .Content }}
+            </section>
+
+            <a class="back-link" href="{{ "/" | relURL }}">
+                Voltar à página inicial
+            </a>
+        </main>
+
+        {{ partial "ofertas.html" . }}
+
+    </div>
 
     <footer>
         <p>© 2026 Sauerkraut Electronics. Todos os direitos reservados.</p>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -7,7 +8,6 @@
     <title>{{ .Params.homepage.document_title }}</title>
 
     <meta name="description" content="{{ .Description }}">
-
     <meta name="theme-color" content="#0b1118">
 
     <style>
@@ -93,6 +93,7 @@
         }
 
         /* Estrutura principal: Explore, conteúdo e ofertas */
+
         .page-layout {
             display: grid;
             grid-template-columns: 220px minmax(0, 1fr) 240px;
@@ -117,8 +118,7 @@
             top: 20px;
         }
 
-        .explore-menu h2,
-        .offers-panel h2 {
+        .explore-menu h2 {
             font-size: 1.2rem;
             margin-bottom: 15px;
         }
@@ -138,11 +138,6 @@
 
         .explore-menu a:hover {
             color: #48c3ee;
-        }
-
-        .offers-panel p {
-            color: #c5ced8;
-            font-size: 0.95rem;
         }
 
         .main-content {
@@ -250,13 +245,6 @@
             font-size: 0.98rem;
         }
 
-        .coming-soon {
-            background: #101e2b;
-            border-left: 4px solid #159ed0;
-            padding: 25px;
-            border-radius: 5px;
-        }
-
         .contact-links {
             display: flex;
             flex-wrap: wrap;
@@ -305,6 +293,9 @@
             }
         }
     </style>
+
+    <link rel="stylesheet" href="{{ "css/ofertas.css" | relURL }}">
+    <script src="{{ "js/ofertas.js" | relURL }}" defer></script>
 </head>
 
 <body>
@@ -374,13 +365,6 @@
                     <p>{{ .Params.homepage.founder_text }}</p>
                 </section>
 
-                <section id="em-breve">
-                    <h2>{{ .Params.homepage.coming_title }}</h2>
-                    <div class="coming-soon">
-                        <p>{{ .Params.homepage.coming_text }}</p>
-                    </div>
-                </section>
-
                 <section id="contato">
                     <h2>{{ .Params.homepage.contact_title }}</h2>
                     <p>{{ .Params.homepage.contact_text }}</p>
@@ -407,10 +391,7 @@
             </main>
         </div>
 
-        <aside class="offers-panel">
-            <h2>{{ .Params.homepage.offers_title }}</h2>
-            <p>{{ .Params.homepage.offers_text }}</p>
-        </aside>
+        {{ partial "ofertas.html" . }}
 
     </div>
 

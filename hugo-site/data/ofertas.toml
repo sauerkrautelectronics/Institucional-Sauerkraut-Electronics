@@ -1,0 +1,6 @@
+titulo = 'Ofertas-relâmpago'
+mensagem_padrao = 'Em breve, ofertas e produtos selecionados para seus projetos eletrônicos.'
+
+# Cada oferta cadastrada aparecerá no carrossel.
+# Deixe a lista vazia até termos ofertas reais para divulgar.
+ofertas = []

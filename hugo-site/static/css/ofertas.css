@@ -1,0 +1,116 @@
+
+/* ========================================
+   PAINÉIS DE OFERTAS — SAUERKRAUT ELECTRONICS
+   ======================================== */
+
+.offers-panel {
+    width: 100%;
+    background: #101a25;
+    border: 1px solid #26394b;
+    border-radius: 10px;
+    padding: 20px;
+    color: #e8edf3;
+    align-self: start;
+}
+
+.offers-panel h2 {
+    color: #42b9e8;
+    font-size: 1.15rem;
+    line-height: 1.4;
+    margin: 0 0 20px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #26394b;
+}
+
+.offers-panel p {
+    color: #c5ced8;
+    font-size: 0.92rem;
+    line-height: 1.6;
+    margin: 10px 0;
+}
+
+.offer-item[hidden] {
+    display: none;
+}
+
+.offer-item h3 {
+    color: #ffffff;
+    font-size: 1.05rem;
+    margin: 12px 0;
+}
+
+.offer-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 190px;
+    object-fit: contain;
+    border-radius: 6px;
+    margin-bottom: 12px;
+}
+
+.offer-price {
+    color: #42b9e8 !important;
+    font-size: 1.15rem !important;
+    font-weight: bold;
+}
+
+.offer-link {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 9px 14px;
+    background: #087eaa;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background 0.2s ease;
+}
+
+.offer-link:hover {
+    background: #159ed0;
+}
+
+.offer-controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 20px;
+    padding-top: 12px;
+    border-top: 1px solid #26394b;
+}
+
+.offer-controls button {
+    width: 34px;
+    height: 32px;
+    border: 1px solid #087eaa;
+    border-radius: 5px;
+    background: #101e2b;
+    color: #42b9e8;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+.offer-controls button:hover {
+    background: #087eaa;
+    color: #ffffff;
+}
+
+.offer-controls span {
+    color: #aab9c8;
+    font-size: 0.8rem;
+}
+
+/* Ajustes para telas menores */
+
+@media (max-width: 600px) {
+    .offers-panel {
+        padding: 16px;
+    }
+
+    .offer-image {
+        max-height: 220px;
+    }
+}
