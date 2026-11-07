@@ -12,6 +12,10 @@ Este departamento reunirá projetos de eletrônica disponibilizados para estudo,
 
 Cada publicação poderá incluir descrição do projeto, informações técnicas, esquemas, lista de componentes, arquivos, códigos-fonte e créditos, conforme aplicável.
 
+<div class="coming-soon">
+
 ## Novos conteúdos em preparação
 
 Estamos preparando os primeiros materiais deste departamento. Em breve, você encontrará aqui projetos e documentação técnica.
+
+</div>
