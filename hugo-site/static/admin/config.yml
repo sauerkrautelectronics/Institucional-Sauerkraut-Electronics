@@ -1,0 +1,257 @@
+
+backend:
+  name: turbo-github
+  turbo_site_id: 0e698737-0d67-440a-ba7d-1ff246e134f0
+  branch: estrutura-explore
+
+locale: pt
+
+site_url: https://sauerkrautelectronics.com.br
+display_url: https://sauerkrautelectronics.com.br
+
+media_folder: "hugo-site/static/images/uploads"
+public_folder: "/images/uploads"
+
+media_processing:
+  enabled: true
+  format:
+    enabled: true
+    default: webp
+  quality: 80
+  strip_metadata: true
+  width: 1600
+  height: null
+
+slug:
+  encoding: ascii
+  clean_accents: true
+  sanitize_replacement: "-"
+
+collections:
+
+  - name: projetos-abertos
+    label: Projetos Abertos
+    label_singular: Projeto Aberto
+    folder: hugo-site/content/projetos-abertos
+    create: true
+    delete: false
+    path: "{{slug}}/index"
+    extension: md
+    format: yaml-frontmatter
+    media_folder: ""
+    public_folder: ""
+    fields:
+      - label: Título
+        name: title
+        widget: string
+        required: true
+      - label: Data
+        name: date
+        widget: datetime
+        required: true
+      - label: Descrição resumida
+        name: description
+        widget: string
+        required: false
+      - label: Conteúdo
+        name: body
+        widget: markdown
+
+  - name: projetos-comerciais
+    label: Projetos Comerciais
+    label_singular: Projeto Comercial
+    folder: hugo-site/content/projetos-comerciais
+    create: true
+    delete: false
+    path: "{{slug}}/index"
+    extension: md
+    format: yaml-frontmatter
+    media_folder: ""
+    public_folder: ""
+    fields:
+      - label: Título
+        name: title
+        widget: string
+        required: true
+      - label: Data
+        name: date
+        widget: datetime
+        required: true
+      - label: Descrição resumida
+        name: description
+        widget: string
+        required: false
+      - label: Conteúdo
+        name: body
+        widget: markdown
+
+  - name: tutoriais-e-guias
+    label: Tutoriais e Guias
+    label_singular: Tutorial ou Guia
+    folder: hugo-site/content/tutoriais-e-guias
+    create: true
+    delete: false
+    path: "{{slug}}/index"
+    extension: md
+    format: yaml-frontmatter
+    media_folder: ""
+    public_folder: ""
+    fields:
+      - label: Título
+        name: title
+        widget: string
+        required: true
+      - label: Data
+        name: date
+        widget: datetime
+        required: true
+      - label: Descrição resumida
+        name: description
+        widget: string
+        required: false
+      - label: Conteúdo
+        name: body
+        widget: markdown
+
+  - name: dicas-e-tecnicas
+    label: Dicas e Técnicas
+    label_singular: Dica ou Técnica
+    folder: hugo-site/content/dicas-e-tecnicas
+    create: true
+    delete: false
+    path: "{{slug}}/index"
+    extension: md
+    format: yaml-frontmatter
+    media_folder: ""
+    public_folder: ""
+    fields:
+      - label: Título
+        name: title
+        widget: string
+        required: true
+      - label: Data
+        name: date
+        widget: datetime
+        required: true
+      - label: Descrição resumida
+        name: description
+        widget: string
+        required: false
+      - label: Conteúdo
+        name: body
+        widget: markdown
+
+  - name: arquivos-e-downloads
+    label: Arquivos e Downloads
+    label_singular: Arquivo ou Download
+    folder: hugo-site/content/arquivos-e-downloads
+    create: true
+    delete: false
+    path: "{{slug}}/index"
+    extension: md
+    format: yaml-frontmatter
+    media_folder: ""
+    public_folder: ""
+    fields:
+      - label: Título
+        name: title
+        widget: string
+        required: true
+      - label: Data
+        name: date
+        widget: datetime
+        required: true
+      - label: Descrição resumida
+        name: description
+        widget: string
+        required: false
+      - label: Descrição e links para download
+        name: body
+        widget: markdown
+
+  - name: notas-e-referencias-tecnicas
+    label: Notas e Referências Técnicas
+    label_singular: Nota ou Referência
+    folder: hugo-site/content/notas-e-referencias-tecnicas
+    create: true
+    delete: false
+    path: "{{slug}}/index"
+    extension: md
+    format: yaml-frontmatter
+    media_folder: ""
+    public_folder: ""
+    fields:
+      - label: Título
+        name: title
+        widget: string
+        required: true
+      - label: Data
+        name: date
+        widget: datetime
+        required: true
+      - label: Descrição resumida
+        name: description
+        widget: string
+        required: false
+      - label: Texto e referências
+        name: body
+        widget: markdown
+
+  - name: ofertas-relampago
+    label: Ofertas-Relâmpago
+    label_singular: Configuração das Ofertas
+    format: toml
+    delete: false
+    files:
+      - name: ofertas
+        label: Gerenciar ofertas
+        file: hugo-site/data/ofertas.toml
+        description: Cadastre, edite e organize os produtos em destaque no carrossel.
+        fields:
+          - label: Título da seção
+            name: titulo
+            widget: string
+            required: true
+
+          - label: Mensagem quando não houver ofertas
+            name: mensagem_padrao
+            widget: string
+            required: true
+
+          - label: Ofertas cadastradas
+            name: ofertas
+            widget: list
+            default: []
+            allow_add: true
+            allow_remove: true
+            allow_reorder: true
+            fields:
+              - label: Título do produto
+                name: titulo
+                widget: string
+                required: true
+
+              - label: Fotografia do produto
+                name: imagem
+                widget: image
+                required: true
+
+              - label: Descrição curta
+                name: descricao
+                widget: text
+                required: true
+
+              - label: Preço
+                name: preco
+                widget: string
+                required: false
+
+              - label: Link do produto na Nuvemshop
+                name: link
+                widget: string
+                required: true
+
+              - label: Oferta ativa
+                name: ativa
+                widget: boolean
+                default: true
