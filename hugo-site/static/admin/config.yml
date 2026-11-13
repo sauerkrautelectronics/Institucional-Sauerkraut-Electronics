@@ -1,4 +1,3 @@
-
 backend:
   name: turbo-github
   turbo_site_id: 0e698737-0d67-440a-ba7d-1ff246e134f0
@@ -53,17 +52,71 @@ collections:
         name: title
         widget: string
         required: true
+
       - label: Data
         name: date
         widget: datetime
         required: true
+
       - label: Descrição resumida
         name: description
         widget: string
         required: false
-      - label: Conteúdo
-        name: body
-        widget: markdown
+
+      - label: Conteúdo da publicação
+        name: blocks
+        widget: list
+        summary: "{{fields.type}}"
+        allow_add: true
+        allow_remove: true
+        allow_reorder: true
+        types:
+          - label: Texto
+            name: text
+            widget: object
+            fields:
+              - label: Conteúdo
+                name: text
+                widget: richtext
+
+          - label: Imagem
+            name: image
+            widget: object
+            fields:
+              - label: Fotografia
+                name: image
+                widget: image
+              - label: Texto alternativo
+                name: alt
+                widget: string
+                required: false
+              - label: Legenda
+                name: caption
+                widget: string
+                required: false
+
+          - label: Vídeo do YouTube
+            name: youtube
+            widget: object
+            fields:
+              - label: Endereço do vídeo
+                name: url
+                widget: string
+              - label: Legenda
+                name: caption
+                widget: string
+                required: false
+
+          - label: Hiperlink
+            name: link
+            widget: object
+            fields:
+              - label: Texto do link
+                name: text
+                widget: string
+              - label: Endereço do link
+                name: url
+                widget: string
 
   - name: projetos-comerciais
     label: Projetos Comerciais
@@ -81,17 +134,71 @@ collections:
         name: title
         widget: string
         required: true
+
       - label: Data
         name: date
         widget: datetime
         required: true
+
       - label: Descrição resumida
         name: description
         widget: string
         required: false
-      - label: Conteúdo
-        name: body
-        widget: markdown
+
+      - label: Conteúdo da publicação
+        name: blocks
+        widget: list
+        summary: "{{fields.type}}"
+        allow_add: true
+        allow_remove: true
+        allow_reorder: true
+        types:
+          - label: Texto
+            name: text
+            widget: object
+            fields:
+              - label: Conteúdo
+                name: text
+                widget: richtext
+
+          - label: Imagem
+            name: image
+            widget: object
+            fields:
+              - label: Fotografia
+                name: image
+                widget: image
+              - label: Texto alternativo
+                name: alt
+                widget: string
+                required: false
+              - label: Legenda
+                name: caption
+                widget: string
+                required: false
+
+          - label: Vídeo do YouTube
+            name: youtube
+            widget: object
+            fields:
+              - label: Endereço do vídeo
+                name: url
+                widget: string
+              - label: Legenda
+                name: caption
+                widget: string
+                required: false
+
+          - label: Hiperlink
+            name: link
+            widget: object
+            fields:
+              - label: Texto do link
+                name: text
+                widget: string
+              - label: Endereço do link
+                name: url
+                widget: string
 
   - name: tutoriais-e-guias
     label: Tutoriais e Guias
@@ -109,17 +216,71 @@ collections:
         name: title
         widget: string
         required: true
+
       - label: Data
         name: date
         widget: datetime
         required: true
+
       - label: Descrição resumida
         name: description
         widget: string
         required: false
-      - label: Conteúdo
-        name: body
-        widget: markdown
+
+      - label: Conteúdo da publicação
+        name: blocks
+        widget: list
+        summary: "{{fields.type}}"
+        allow_add: true
+        allow_remove: true
+        allow_reorder: true
+        types:
+          - label: Texto
+            name: text
+            widget: object
+            fields:
+              - label: Conteúdo
+                name: text
+                widget: richtext
+
+          - label: Imagem
+            name: image
+            widget: object
+            fields:
+              - label: Fotografia
+                name: image
+                widget: image
+              - label: Texto alternativo
+                name: alt
+                widget: string
+                required: false
+              - label: Legenda
+                name: caption
+                widget: string
+                required: false
+
+          - label: Vídeo do YouTube
+            name: youtube
+            widget: object
+            fields:
+              - label: Endereço do vídeo
+                name: url
+                widget: string
+              - label: Legenda
+                name: caption
+                widget: string
+                required: false
+
+          - label: Hiperlink
+            name: link
+            widget: object
+            fields:
+              - label: Texto do link
+                name: text
+                widget: string
+              - label: Endereço do link
+                name: url
+                widget: string
 
   - name: dicas-e-tecnicas
     label: Dicas e Técnicas
@@ -137,17 +298,71 @@ collections:
         name: title
         widget: string
         required: true
+
       - label: Data
         name: date
         widget: datetime
         required: true
+
       - label: Descrição resumida
         name: description
         widget: string
         required: false
-      - label: Conteúdo
-        name: body
-        widget: markdown
+
+      - label: Conteúdo da publicação
+        name: blocks
+        widget: list
+        summary: "{{fields.type}}"
+        allow_add: true
+        allow_remove: true
+        allow_reorder: true
+        types:
+          - label: Texto
+            name: text
+            widget: object
+            fields:
+              - label: Conteúdo
+                name: text
+                widget: richtext
+
+          - label: Imagem
+            name: image
+            widget: object
+            fields:
+              - label: Fotografia
+                name: image
+                widget: image
+              - label: Texto alternativo
+                name: alt
+                widget: string
+                required: false
+              - label: Legenda
+                name: caption
+                widget: string
+                required: false
+
+          - label: Vídeo do YouTube
+            name: youtube
+            widget: object
+            fields:
+              - label: Endereço do vídeo
+                name: url
+                widget: string
+              - label: Legenda
+                name: caption
+                widget: string
+                required: false
+
+          - label: Hiperlink
+            name: link
+            widget: object
+            fields:
+              - label: Texto do link
+                name: text
+                widget: string
+              - label: Endereço do link
+                name: url
+                widget: string
 
   - name: arquivos-e-downloads
     label: Arquivos e Downloads
@@ -165,14 +380,17 @@ collections:
         name: title
         widget: string
         required: true
+
       - label: Data
         name: date
         widget: datetime
         required: true
+
       - label: Descrição resumida
         name: description
         widget: string
         required: false
+
       - label: Descrição e links para download
         name: body
         widget: markdown
@@ -193,17 +411,71 @@ collections:
         name: title
         widget: string
         required: true
+
       - label: Data
         name: date
         widget: datetime
         required: true
+
       - label: Descrição resumida
         name: description
         widget: string
         required: false
-      - label: Texto e referências
-        name: body
-        widget: markdown
+
+      - label: Conteúdo da publicação
+        name: blocks
+        widget: list
+        summary: "{{fields.type}}"
+        allow_add: true
+        allow_remove: true
+        allow_reorder: true
+        types:
+          - label: Texto
+            name: text
+            widget: object
+            fields:
+              - label: Conteúdo
+                name: text
+                widget: richtext
+
+          - label: Imagem
+            name: image
+            widget: object
+            fields:
+              - label: Fotografia
+                name: image
+                widget: image
+              - label: Texto alternativo
+                name: alt
+                widget: string
+                required: false
+              - label: Legenda
+                name: caption
+                widget: string
+                required: false
+
+          - label: Vídeo do YouTube
+            name: youtube
+            widget: object
+            fields:
+              - label: Endereço do vídeo
+                name: url
+                widget: string
+              - label: Legenda
+                name: caption
+                widget: string
+                required: false
+
+          - label: Hiperlink
+            name: link
+            widget: object
+            fields:
+              - label: Texto do link
+                name: text
+                widget: string
+              - label: Endereço do link
+                name: url
+                widget: string
 
   - name: ofertas-relampago
     label: Ofertas-Relâmpago
