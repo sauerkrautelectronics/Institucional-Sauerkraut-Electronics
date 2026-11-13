@@ -35,12 +35,20 @@ collections:
     folder: hugo-site/content/projetos-abertos
     create: true
     delete: false
+    filter:
+      field: cms_collection
+      value: projetos-abertos
     path: "{{slug}}/index"
     extension: md
     format: yaml-frontmatter
     media_folder: ""
     public_folder: ""
     fields:
+      - label: Identificação interna
+        name: cms_collection
+        widget: hidden
+        default: projetos-abertos
+
       - label: Título
         name: title
         widget: string
