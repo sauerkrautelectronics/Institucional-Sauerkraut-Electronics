@@ -366,7 +366,7 @@ collections:
 
   - name: arquivos-e-downloads
     label: Arquivos e Downloads
-    label_singular: Arquivo ou Download
+    label_singular: Arquivo e Download
     folder: hugo-site/content/arquivos-e-downloads
     create: true
     delete: false
@@ -381,23 +381,32 @@ collections:
         widget: string
         required: true
 
+      - label: Descrição
+        name: description
+        widget: text
+        required: true
+
       - label: Data
         name: date
         widget: datetime
         required: true
 
-      - label: Descrição resumida
-        name: description
-        widget: string
-        required: false
+      - label: Estado da publicação (marque para manter como rascunho)
+        name: draft
+        widget: boolean
+        default: true
 
-      - label: Descrição e links para download
-        name: body
-        widget: markdown
+      - label: Arquivo para download
+        name: download_file
+        widget: file
+        required: true
+        media_folder: "/hugo-site/static/downloads"
+        public_folder: "/downloads"
+        choose_url: false
 
   - name: notas-e-referencias-tecnicas
     label: Notas e Referências Técnicas
-    label_singular: Nota ou Referência
+    label_singular: Nota e Referência
     folder: hugo-site/content/notas-e-referencias-tecnicas
     create: true
     delete: false
@@ -412,70 +421,28 @@ collections:
         widget: string
         required: true
 
+      - label: Descrição
+        name: description
+        widget: text
+        required: true
+
       - label: Data
         name: date
         widget: datetime
         required: true
 
-      - label: Descrição resumida
-        name: description
-        widget: string
-        required: false
+      - label: Estado da publicação (marque para manter como rascunho)
+        name: draft
+        widget: boolean
+        default: true
 
-      - label: Conteúdo da publicação
-        name: blocks
-        widget: list
-        summary: "{{fields.type}}"
-        allow_add: true
-        allow_remove: true
-        allow_reorder: true
-        types:
-          - label: Texto
-            name: text
-            widget: object
-            fields:
-              - label: Conteúdo
-                name: text
-                widget: richtext
-
-          - label: Imagem
-            name: image
-            widget: object
-            fields:
-              - label: Fotografia
-                name: image
-                widget: image
-              - label: Texto alternativo
-                name: alt
-                widget: string
-                required: false
-              - label: Legenda
-                name: caption
-                widget: string
-                required: false
-
-          - label: Vídeo do YouTube
-            name: youtube
-            widget: object
-            fields:
-              - label: Endereço do vídeo
-                name: url
-                widget: string
-              - label: Legenda
-                name: caption
-                widget: string
-                required: false
-
-          - label: Hiperlink
-            name: link
-            widget: object
-            fields:
-              - label: Texto do link
-                name: text
-                widget: string
-              - label: Endereço do link
-                name: url
-                widget: string
+      - label: Arquivo para download
+        name: download_file
+        widget: file
+        required: true
+        media_folder: "/hugo-site/static/downloads"
+        public_folder: "/downloads"
+        choose_url: false
 
   - name: ofertas-relampago
     label: Ofertas-Relâmpago
