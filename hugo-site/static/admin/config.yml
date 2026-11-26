@@ -63,6 +63,22 @@ collections:
         widget: string
         required: false
 
+      - label: Arquivos para download
+        name: downloads
+        widget: list
+        required: false
+        label_singular: Arquivo
+        allow_add: true
+        allow_remove: true
+        allow_reorder: true
+        field:
+          label: Arquivo
+          name: file
+          widget: file
+          media_folder: "/hugo-site/static/downloads"
+          public_folder: "/downloads"
+          choose_url: false
+
       - label: Conteúdo da publicação
         name: blocks
         widget: list
@@ -144,6 +160,22 @@ collections:
         name: description
         widget: string
         required: false
+
+      - label: Arquivos para download
+        name: downloads
+        widget: list
+        required: false
+        label_singular: Arquivo
+        allow_add: true
+        allow_remove: true
+        allow_reorder: true
+        field:
+          label: Arquivo
+          name: file
+          widget: file
+          media_folder: "/hugo-site/static/downloads"
+          public_folder: "/downloads"
+          choose_url: false
 
       - label: Conteúdo da publicação
         name: blocks
@@ -227,6 +259,22 @@ collections:
         widget: string
         required: false
 
+      - label: Arquivos para download
+        name: downloads
+        widget: list
+        required: false
+        label_singular: Arquivo
+        allow_add: true
+        allow_remove: true
+        allow_reorder: true
+        field:
+          label: Arquivo
+          name: file
+          widget: file
+          media_folder: "/hugo-site/static/downloads"
+          public_folder: "/downloads"
+          choose_url: false
+
       - label: Conteúdo da publicação
         name: blocks
         widget: list
@@ -308,6 +356,22 @@ collections:
         name: description
         widget: string
         required: false
+
+      - label: Arquivos para download
+        name: downloads
+        widget: list
+        required: false
+        label_singular: Arquivo
+        allow_add: true
+        allow_remove: true
+        allow_reorder: true
+        field:
+          label: Arquivo
+          name: file
+          widget: file
+          media_folder: "/hugo-site/static/downloads"
+          public_folder: "/downloads"
+          choose_url: false
 
       - label: Conteúdo da publicação
         name: blocks
@@ -396,13 +460,21 @@ collections:
         widget: boolean
         default: true
 
-      - label: Arquivo para download
-        name: download_file
-        widget: file
-        required: true
-        media_folder: "/hugo-site/static/downloads"
-        public_folder: "/downloads"
-        choose_url: false
+      - label: Arquivos para download
+        name: downloads
+        widget: list
+        required: false
+        label_singular: Arquivo
+        allow_add: true
+        allow_remove: true
+        allow_reorder: true
+        field:
+          label: Arquivo
+          name: file
+          widget: file
+          media_folder: "/hugo-site/static/downloads"
+          public_folder: "/downloads"
+          choose_url: false
 
   - name: notas-e-referencias-tecnicas
     label: Notas e Referências Técnicas
@@ -436,13 +508,21 @@ collections:
         widget: boolean
         default: true
 
-      - label: Arquivo para download
-        name: download_file
-        widget: file
-        required: true
-        media_folder: "/hugo-site/static/downloads"
-        public_folder: "/downloads"
-        choose_url: false
+      - label: Arquivos para download
+        name: downloads
+        widget: list
+        required: false
+        label_singular: Arquivo
+        allow_add: true
+        allow_remove: true
+        allow_reorder: true
+        field:
+          label: Arquivo
+          name: file
+          widget: file
+          media_folder: "/hugo-site/static/downloads"
+          public_folder: "/downloads"
+          choose_url: false
 
   - name: ofertas-relampago
     label: Ofertas-Relâmpago
